@@ -22,16 +22,14 @@ export default {
   },
   methods: {
     addTask(task) {
-      const sameName = (t) => t.name === task.name;
-      const reallyName = (this.tasks.filter(sameName).length = 0);
-      if (reallyName) {
+      const sameName = t => t.name === task.name
+      const reallyName = this.tasks.filter(sameName).length == 0
+      if(reallyName){
         this.tasks.push({
           name: task.name,
           pending: true,
-        });
-      }else {
-		  console.log('algo deu errado')
-	  }
+        })
+      }
     },
   },
 };
